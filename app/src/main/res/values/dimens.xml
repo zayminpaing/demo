@@ -5,4 +5,5 @@
     <dimen name="show_image_margin_top">20dp</dimen>
     <dimen name="show_image_margin_bottom">20dp</dimen>
     <dimen name="failed_margin_top">40dp</dimen>
+    <dimen name="font_font_size">15dp</dimen>
 </resources>

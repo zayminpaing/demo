@@ -4,30 +4,40 @@
     <!-- phone camera is used in this app -->
     <uses-feature
         android:name="android.hardware.camera2"
-        android:required="true" />
-
+        android:required="true" /> <!-- for checking internet connection -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/mag_logo"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".FailedActivity"></activity>
-        <activity android:name=".ResultActivity" />
-        <activity android:name=".ShowImageActivity" />
-        <activity android:name=".AzureActiviry" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".ListPostActivity"
+            android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".RetrieveActivity"
+            android:parentActivityName=".ListPostActivity">
+        </activity>
+        <activity
+            android:name=".SignupActivity"
+            android:parentActivityName=".StartActivity" />
+        <activity android:name=".WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".StartActivity" />
+        <activity android:name=".FailedActivity" />
+        <activity android:name=".ResultActivity" />
+        <activity android:name=".ShowImageActivity" />
+        <activity android:name=".AzureActivity" />
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>

@@ -12,7 +12,5 @@ public interface JsonPlaceHolderApi {
 
     @Multipart
     @POST("awbapredictionchannelapi/predictimage")
-//    Call<List<Post>> getPosts(@PartMap HashMap<String, RequestBody> params);
-    //@POST("posts")
     Call<List<Post>> getPosts(@Part MultipartBody.Part image);
 }
