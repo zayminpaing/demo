@@ -5,99 +5,120 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AzureActiviry">
+
     <include
         android:id="@+id/toolbar"
-        layout="@layout/toolbar"/>
+        layout="@layout/toolbar" />
 
-    <LinearLayout
-        android:layout_below="@id/toolbar"
-        android:orientation="vertical"
+    <ScrollView
+        android:layout_above="@+id/bottom"
+        android:layout_below="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:text="Welcome From Azure AI"
-            android:textColor="#000000"
-            android:textSize="30dp"
-            android:gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/start_margin_top"/>
-        <TextView
-            android:text="You can test your\ncrop with Azure AI"
-            android:textColor="#000000"
-            android:textSize="25dp"
-            android:gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/start_margin_top"/>
+        android:layout_height="match_parent">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:onClick="take_photo">
-            <ImageView
-                android:src="@drawable/ic_camera"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:padding="10dp"/>
-            <TextView
-                android:text="Photo with Camera"
-                android:textColor="#000000"
-                android:gravity="center"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_below="@id/toolbar"
             android:orientation="vertical">
-            <ImageView
-                android:onClick="chooseFromGallery"
-                android:src="@drawable/ic_gallery"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:padding="10dp"/>
+
             <TextView
-                android:text="Choose from Gallery"
-                android:textColor="#000000"
-                android:gravity="center"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/start_margin_top"
+                android:gravity="center"
+                android:text="Welcome From Azure AI"
+                android:textColor="#000000"
+                android:textSize="30dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/start_margin_top"
+                android:gravity="center"
+                android:text="You can test your\ncrop with Azure AI"
+                android:textColor="#000000"
+                android:textSize="25dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="take_photo"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_camera" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Photo with Camera"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:onClick="chooseFromGallery"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_gallery" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Choose from Gallery"
+                    android:textColor="#000000" />
+            </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
+    </ScrollView>
 
     <LinearLayout
-        android:layout_alignParentBottom="true"
+        android:id="@+id/bottom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:orientation="horizontal"
-        android:weightSum="4"
-        android:padding="@dimen/bottom_padding">
+        android:padding="@dimen/bottom_padding"
+        android:weightSum="4">
+
         <ImageView
             android:id="@+id/bottom_contact"
-            android:src="@drawable/ic_contact_70dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:src="@drawable/ic_contact_70dp" />
+
         <ImageView
             android:id="@+id/bottom_home"
-            android:src="@drawable/ic_home_70dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:src="@drawable/ic_home_70dp" />
+
         <ImageView
             android:id="@+id/bottom_help"
-            android:src="@drawable/ic_help_70dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:src="@drawable/ic_help_70dp" />
+
         <ImageView
             android:id="@+id/bottom_back"
-            android:onClick="onBackClicked"
-            android:src="@drawable/ic_back_70dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:onClick="onBackClicked"
+            android:src="@drawable/ic_back_70dp" />
     </LinearLayout>
 
 </RelativeLayout>

@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.awbagroup.awbacropai">
-
-    <!--phone camera is used in this app-->
-    <uses-feature android:name="android.hardware.camera2"
+    <!-- phone camera is used in this app -->
+    <uses-feature
+        android:name="android.hardware.camera2"
         android:required="true" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -13,8 +17,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ShowImageActivity"></activity>
-        <activity android:name=".AzureActiviry"></activity>
+        <activity android:name=".FailedActivity"></activity>
+        <activity android:name=".ResultActivity" />
+        <activity android:name=".ShowImageActivity" />
+        <activity android:name=".AzureActiviry" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

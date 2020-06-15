@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".ShowImageActivity">
+    tools:context=".FailedActivity">
     <include
         android:id="@+id/toolbar"
         layout="@layout/toolbar"/>
     <ScrollView
-        android:layout_above="@+id/bottom"
+        android:layout_above="@id/bottom"
         android:layout_below="@id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -19,28 +18,24 @@
             android:orientation="vertical">
             <ImageView
                 android:id="@+id/img"
+                android:src="@drawable/ic_no_internet"
                 android:layout_width="match_parent"
-                android:layout_height="400dp"/>
+                android:layout_height="300dp"/>
             <TextView
-                android:id="@+id/img_size"
-                android:textSize="20dp"
-                android:gravity="center"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-            <TextView
-                android:text="Please Click The Button for Testing"
+                android:padding="20dp"
+                android:text="Cannot connect to the server please try again"
                 android:textColor="@android:color/black"
-                android:textSize="20dp"
+                android:textSize="30dp"
                 android:gravity="center"
-                android:layout_marginTop="@dimen/show_image_margin_top"
+                android:layout_marginTop="@dimen/failed_margin_top"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
             <Button
-                android:onClick="test_btn_clicked"
-                android:text="Test"
+                android:onClick="failed_btn_clicked"
+                android:text="Please Try Again"
                 android:textColor="@android:color/black"
                 android:background="@drawable/gray_bg_border"
-                android:layout_marginTop="@dimen/show_image_margin_top"
+                android:layout_marginTop="@dimen/failed_margin_top"
                 android:layout_marginBottom="@dimen/show_image_margin_bottom"
                 android:layout_gravity="center"
                 android:layout_width="200dp"
