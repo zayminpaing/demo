@@ -1,0 +1,2 @@
+rootProject.name='Awba Crop AI'
+include ':app'
