@@ -3,13 +3,13 @@ package com.awbagroup.awbacropai;
 import java.util.List;
 
 public class Data {
-    private List<Post> posts;
+    private List<Post> list_posts;
 
     public List<Post> getPosts() {
-        return posts;
+        return list_posts;
     }
 
-    public void setPosts(List<Post> posts) {
-        this.posts = posts;
+    public void setPosts(List<Post> list_posts) {
+        this.list_posts = list_posts;
     }
 }
